@@ -16,7 +16,7 @@ LargeText=
 (
 The largest, most advanced rover NASA has sent to another world touched down on Mars Thursday, after a 203-day journey traversing 293 million miles (472 million kilometers). Confirmation of the successful touchdown was announced in mission control at NASA’s Jet Propulsion Laboratory in Southern California at 3:55 p.m. EST (12:55 p.m. PST).
 
-Packed with groundbreaking technology, the Mars 2020 mission launched July 30, 2020, from Cape Canaveral Space Force Station in Florida. The Perseverance rover mission marks an ambitious first step in the effort to collect Mars samples and return them to Earth.  
+Packed with groundbreaking technology, the Mars 2020 mission launched July 30, 2020, from Cape Canaveral Space Force Station in Florida. The Perseverance rover mission marks an ambitious first step in the effort to collect Mars samples and return them to Earth. 
 
 “This landing is one of those pivotal moments for NASA, the United States, and space exploration globally – when we know we are on the cusp of discovery and sharpening our pencils, so to speak, to rewrite the textbooks,” said acting NASA Administrator Steve Jurczyk. “The Mars 2020 Perseverance mission embodies our nation’s spirit of persevering even in the most challenging of situations, inspiring, and advancing science and exploration. The mission itself personifies the human ideal of persevering toward the future and will help us prepare for human exploration of the Red Planet.”
 
@@ -28,10 +28,10 @@ Some 28 miles (45 kilometers) wide, Jezero Crater sits on the western edge of Is
 
 The power system that provides electricity and heat for Perseverance through its exploration of Jezero Crater is a Multi-Mission Radioisotope Thermoelectric Generator, or MMRTG. The U.S. Department of Energy (DOE) provided it to NASA through an ongoing partnership to develop power systems for civil space applications.
 
-Equipped with seven primary science instruments, the most cameras ever sent to Mars, and its exquisitely complex sample caching system – the first of its kind sent into space – Perseverance will scour the Jezero region for fossilized remains of ancient microscopic Martian life, taking samples along the way.  
+Equipped with seven primary science instruments, the most cameras ever sent to Mars, and its exquisitely complex sample caching system – the first of its kind sent into space – Perseverance will scour the Jezero region for fossilized remains of ancient microscopic Martian life, taking samples along the way. 
 
 “Perseverance is the most sophisticated robotic geologist ever made, but verifying that microscopic life once existed carries an enormous burden of proof,” said Lori Glaze, director of NASA’s Planetary Science Division. “While we’ll learn a lot with the great instruments we have aboard the rover, it may very well require the far more capable laboratories and instruments back here on Earth to tell us whether our samples carry evidence that Mars once harbored life.”
-Paving the Way for Human Missions
+    Paving the Way for Human Missions
 
 “Landing on Mars is always an incredibly difficult task and we are proud to continue building on our past success,” said JPL Director Michael Watkins. “But, while Perseverance advances that success, this rover is also blazing its own path and daring new challenges in the surface mission. We built the rover not just to land but to find and collect the best scientific samples for return to Earth, and its incredibly complex sampling system and autonomy not only enable that mission, they set the stage for future robotic and crewed missions.”
 
@@ -63,98 +63,96 @@ gosub, performance
 ExitApp
 
 performance:
-	; 显示位置更新+动态内容
-	; btt 2114.6、300
-	; btt 全局 SetWindowPos 2113.8、298.4
-	; btt 新建时 SetWindowPos 2125.6、309.8
-	; ToolTip 14864、634
-	计时()
-	loop, 50
-	{
-		n++
-		ellipsis:="`n"
-		loop, % Mod(n,20)+1
-			ellipsis.="."
-		btt(Text ellipsis, n, n)
-	}
-	btt()
-	计时()
+    ; 显示位置更新+动态内容
+    ; btt 2114.6、300
+    ; btt 全局 SetWindowPos 2113.8、298.4
+    ; btt 新建时 SetWindowPos 2125.6、309.8
+    ; ToolTip 14864、634
+    计时()
+    loop, 50
+    {
+        n++
+        ellipsis:="`n"
+        loop, % Mod(n,20)+1
+            ellipsis.="."
+        btt(Text ellipsis, n, n)
+    }
+    btt()
+    计时()
 
-	计时()
-	loop, 50
-	{
-		n++
-		ellipsis:="`n"
-		loop, % Mod(n,20)+1
-			ellipsis.="."
-		ToolTip, %Text%%ellipsis%, %n%, %n%
-	}
-	ToolTip
-	计时()
-	; ---------------------------------
+    计时()
+    loop, 50
+    {
+        n++
+        ellipsis:="`n"
+        loop, % Mod(n,20)+1
+            ellipsis.="."
+        ToolTip, %Text%%ellipsis%, %n%, %n%
+    }
+    ToolTip
+    计时()
+    ; ---------------------------------
 
+    ; 显示位置更新+静态内容
+    ; btt 217.2、27.6
+    ; btt 全局 SetWindowPos 213.6、33.2
+    ; btt 新建时 SetWindowPos 212、31.6
+    ; ToolTip 10956、549
+    计时()
+    loop, 50
+    {
+        n++
+        btt(Text, n, n)
+    }
+    btt()
+    计时()
 
-	; 显示位置更新+静态内容
-	; btt 217.2、27.6
-	; btt 全局 SetWindowPos 213.6、33.2
-	; btt 新建时 SetWindowPos 212、31.6
-	; ToolTip 10956、549
-	计时()
-	loop, 50
-	{
-		n++
-		btt(Text, n, n)
-	}
-	btt()
-	计时()
+    计时()
+    loop, 50
+    {
+        n++
+        ToolTip, %Text%, %n%, %n%
+    }
+    ToolTip
+    计时()
+    ; ---------------------------------
 
-	计时()
-	loop, 50
-	{
-		n++
-		ToolTip, %Text%, %n%, %n%
-	}
-	ToolTip
-	计时()
-	; ---------------------------------
+    ; 显示位置固定+静态内容
+    ; btt 197.2、17.2
+    ; btt 全局 SetWindowPos 211.2、20.6
+    ; btt 新建时 SetWindowPos 205、19.8
+    ; ToolTip 7892、270
+    计时()
+    loop, 50
+    {
+        btt(Text,100,100)
+    }
+    btt()
+    计时()
 
-
-	; 显示位置固定+静态内容
-	; btt 197.2、17.2
-	; btt 全局 SetWindowPos 211.2、20.6
-	; btt 新建时 SetWindowPos 205、19.8
-	; ToolTip 7892、270
-	计时()
-	loop, 50
-	{
-		btt(Text,100,100)
-	}
-	btt()
-	计时()
-
-	计时()
-	loop, 50
-	{
-		ToolTip, %Text%,100,100
-	}
-	ToolTip
-	计时()
-	; ---------------------------------
+    计时()
+    loop, 50
+    {
+        ToolTip, %Text%,100,100
+    }
+    ToolTip
+    计时()
+    ; ---------------------------------
 return
 
 计时()
 {
-	Static
-	if (CounterBefore="")
-	{
-		DllCall("QueryPerformanceFrequency", "Int64*", freq)
-		, DllCall("QueryPerformanceCounter", "Int64*", CounterBefore)
-	}
-	else
-	{
-		DllCall("QueryPerformanceCounter", "Int64*", CounterAfter)
-		, 耗时:=(CounterAfter - CounterBefore) / freq * 1000
-		, CounterBefore:=""
-		MsgBox, 4096, elapsed time, % Format("{1} ms`r`nOR`r`n{2} m {3} s", 耗时, Floor(耗时/1000/60), Round(Mod(耗时/1000,60)))
-	}
+    Static
+    if (CounterBefore="")
+    {
+        DllCall("QueryPerformanceFrequency", "Int64*", freq)
+        , DllCall("QueryPerformanceCounter", "Int64*", CounterBefore)
+    }
+    else
+    {
+        DllCall("QueryPerformanceCounter", "Int64*", CounterAfter)
+        , 耗时:=(CounterAfter - CounterBefore) / freq * 1000
+        , CounterBefore:=""
+        MsgBox, 4096, elapsed time, % Format("{1} ms`r`nOR`r`n{2} m {3} s", 耗时, Floor(耗时/1000/60), Round(Mod(耗时/1000,60)))
+    }
 }
